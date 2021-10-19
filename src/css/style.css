@@ -13,6 +13,7 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
 }
 
 
@@ -22,6 +23,93 @@ nav{
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.menu li a{
+    transition: all 0.1;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+    -webkit-animation: topshift 0.2s;
+    -o-animation: topshift 0.2s;
+    animation: topshift 0.2s;
+}
+.menu li a:visited{
+    color: white;
+}
+
+.menu li a:hover{
+    color: #e88604;
+}
+.menu li a:active{
+    transform: scale(1.1);
+}
+.title_container input{
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.title_container input:hover{
+    background: #344051;
+    color: white;
+}
+.title_container input:hover{
+    transform: scale(1.1);
+}
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 
 .menu{
@@ -36,6 +124,10 @@ nav{
     margin-right: 40px;
     font-size:16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0 ;
 }
 
 .main{
@@ -50,6 +142,13 @@ nav{
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 0.8s ease forwards;
+    -o-animation: titlemove 0.8s ease forwards; 
+    animation: titlemove 0.8s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
 }
 
 .title_container h1{
@@ -75,8 +174,8 @@ nav{
     margin: 50px 14px 0px 14px;
 }
 
+
 .about_me{
-    padding-top:  990px;
     text-align: center;
     height: calc(100%-1016);
     background: content-box #fcfdfd center;
@@ -123,6 +222,12 @@ nav{
     
 }
 
+.about_me input:hover{
+    color: #e88604;
+    background-color: wheat;
+    transform: scale(1.1);
+}
+
 .what_can_i_do{
     text-align: center;
     float:left;
@@ -130,6 +235,7 @@ nav{
     width: 100%;
     height: 523px;
 }
+
 .what_can_i_do h2{
     margin-top: 107px;
     font-family: 'Franklin Gothic Medium', 'Regular';
@@ -157,6 +263,9 @@ nav{
     margin-left: 40px;
     margin-right: 40px;
     width: auto;
+    -webkit-animation: topshift 0.2s;
+    -o-animation: topshift 0.2s;
+    animation: topshift 0.2s;
 }
 
 .what_can_i_do ul{
@@ -246,6 +355,13 @@ nav{
     font-size: 15pt;
     margin-bottom: 200px;
 }
+
+.cases button:hover{
+    color: #63b5ae;
+    background-color: white;
+    transform: scale(1);
+}
+
 .cost_calculation{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Regular';
@@ -311,10 +427,15 @@ nav{
     font-size: 12pt;
     padding-left: 814px;
 }
-
+.cost_calculation div select:hover{
+    
+    background-color:rgba(238, 238, 238, 40%);
+    font-weight: bold;
+    transform: scale(1);
+}
 .statistics{
     text-align: center;
-    background: no-repeat center/100% url(../img/laptopbackground.jpg);
+    background: fixed no-repeat center/100% url(../img/laptopbackground.jpg);
     width: 100%;
     height: auto;
     margin-top: 155px;
@@ -447,6 +568,32 @@ nav{
     float: left;
     margin-left: 594px;
     margin-right: 543px;
+}
+
+.contacts_list li p:hover{
+    color: #c96500;
+}
+.contacts form input:hover{
+    color: #c96500;
+    background-color:rgba(0, 0, 0, 30%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1.1);
+}
+
+.contacts form .top:hover{
+    color: #fff;
+    background-color:rgba(255, 255, 255, 60%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1);
+}
+form textarea:hover{
+    color: #fff;
+    background-color:rgba(255, 255, 255, 70%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1);
 }
 
 .contacts form textarea{

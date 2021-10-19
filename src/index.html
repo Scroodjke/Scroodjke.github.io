@@ -5,34 +5,117 @@
     <meta name="description" content="Это моя первая страница...">
     <meta name="author" content="Andrey">
     <meta name="robots" content="all">
-    
     <meta property="og:title" content="Это моя первая страница...">
-   
     <title>Андрей Браун - Веб-разработчик</title>
+    <style>
+    .preloader {
+        /*фиксированное позиционирование*/
+        position: fixed;
+        /* координаты положения */
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* фоновый цвет элемента */
+        background: #e0e0e0;
+        /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+        z-index: 1001;
+      }
+      
+      .preloader__row {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: -35px;
+        margin-left: -35px;
+        text-align: center;
+        animation: preloader-rotate 2s infinite linear;
+      }
+      
+      .preloader__item {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        background-color: #337ab7;
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        animation: preloader-bounce 2s infinite ease-in-out;
+      }
+      
+      .preloader__item:last-child {
+        top: auto;
+        bottom: 0;
+        animation-delay: -1s;
+      }
+      
+      @keyframes preloader-rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      @keyframes preloader-bounce {
+      
+        0%,
+        100% {
+          transform: scale(0);
+        }
+      
+        50% {
+          transform: scale(1);
+        }
+      }
+      
+      .loaded_hiding .preloader {
+        transition: 0.3s opacity;
+        opacity: 0;
+      }
+      
+      .loaded .preloader {
+        display: none;
+      }
+      </style>
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded');
+        }
+      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
+    
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+      </div>
     <header>
         <nav>
             <div class="logo">Андрей Браун</div>
             <div class="menu"><ul>
-                <li>Обо мне</li>
-                <li>Услуги</li>
-                <li>Кейсы</li>
-                <li>Прайс</li>
-                <li>Отзывы</li>
-                <li>Контакты</li>
+                <li><a href="">Обо мне</a></li>
+                <li><a href="">Услуги</a></li>
+                <li><a href="">Кейсы</a> </li>
+                <li><a href="">Прайс</a></li>
+                <li><a href="">Отзывы</a></li>
+                <li><a href="">Контакты</a></li>
             </ul></div>
         </nav>
     </header>
-    <div class="main"><div class="title_container">
+    
+    <section class="main"><div class="title_container">
         <h1>Привет<br>Я Андрей Браун</br></h1>
         <h4>Фулл стек веб-разработчик</h4>
-        <input type="submit" value="Обо мне">
-        <input type="submit" value="Мои работы">
-    </div>
+        <input type="button" value="Обо мне">
+        <input type="button" value="Мои работы">
+    </section></div>
     <div class="about_me">
         <h2>ОБО МНЕ</h2>
         <img src="img/line.png" alt="" class="line" style="display: block; margin: 0 auto;"/>
@@ -182,7 +265,6 @@
                     <li><img src="img/inst.png" alt=""></li>
                     <li><img src="img/in.png" alt=""></li>
                 </ul>
-           
             </div>
         </div>
 
