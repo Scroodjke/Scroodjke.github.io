@@ -369,6 +369,7 @@ nav{
 .proj_ref{
     margin-top: 20px;
     margin-right: 50px;
+    margin-left: -125px;
 }
 
 .cases button:hover{
