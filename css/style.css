@@ -33,6 +33,7 @@ nav{
     animation: comming 2s ease;
 }
 
+
 .main{
     width: 100%;
     height: 100%;
@@ -382,6 +383,7 @@ nav{
     text-align: left;
     margin-bottom: 500px;
     
+    
 }
 
 .proj_name p{
@@ -390,8 +392,14 @@ line-height: 1.2;
 font-weight: 400;
 letter-spacing: -0.06em;
 color: #38475a;
+
 }
 
+@media screen and (min-width: 440px) {
+    .proj_name p{
+      font-size: 15px;
+    }
+   }
 .proj_ref{
     margin-top: 20px;
     margin-right: 40px;
@@ -411,6 +419,8 @@ color: #38475a;
 }
 
 .cost_calculation{
+    
+    margin-top: 20%px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Regular';
    
