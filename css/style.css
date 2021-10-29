@@ -1,0 +1,775 @@
+@font-face {
+    font-family: "Bahnschrift";
+    src: url(../fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF);
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+hr{
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;   
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background: #344051;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.logo{
+    color:#fff;
+    font-size: 28px;
+    line-height: 60px;
+    float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.menu li a{
+    transition: all 0.5s ;
+    color: white;
+    transform: scale(1);
+    float: left;
+    -webkit-animation: topshift 0.2s;
+    -o-animation: topshift 0.2s;
+    animation: topshift 0.2s;
+    text-decoration: none;
+}
+.menu li a:visited{
+    color: white;
+}
+
+.menu li a:hover{
+    color: #e88604;
+}
+.menu li a:active{
+    transform: scale(1.2);
+}
+
+.title_container input{
+    transition: all 0.7s;
+    transform: scale(1.1);
+    
+}
+
+.title_container input:hover{
+    background: #344051;
+    color: white;
+    transition: all 0.7s ;
+    transform: scale(1.1);
+
+}
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.menu{
+    float: left;
+}
+
+.menu li{
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    margin-right: 40px;
+    font-size:14px;
+    text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0 ;
+}
+
+.main{
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url(../img/boy.png) local 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
+    margin-bottom: 100px;
+}
+.white-btn{
+    color: white;
+}
+.white-btn:visited{
+    color:white
+}
+.title_container{
+    float: left;
+    margin-top: 432px;
+    margin-bottom: 300px;
+    color: #2c384a;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    -webkit-animation: titlemove 0.8s ease forwards;
+    -o-animation: titlemove 0.8s ease forwards; 
+    animation: titlemove 0.8s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.title_container h1{
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.title_container h4{
+    padding-top: 50px;
+    font-size: 22px;
+    color: #79818d;
+}
+
+.title_container input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 13px;
+    padding: 0px 16px;
+    margin: 50px 14px 100px 14px;
+}
+
+.about_me{
+    text-align: center;
+    height: calc(100%-1016);
+    background: content-box #fcfdfd center;
+    
+}
+
+.about_me h2{
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+.about_me p{
+    color:#3f495a;
+    font-family: 'Calibri', 'Regular';
+    padding-bottom: 34px;
+    font-size: 13pt;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 17.7px;
+    line-height: 17px;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    color: #38475a;
+}
+.photo{
+    padding-top: 60px;
+    padding-bottom: 23px;
+}
+
+.line{
+    margin-left: 10%;
+}
+
+.about_me input{
+    color:#6f707e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background:none;
+    border: 2px solid #6f707e;
+    padding: 8px 11px 8px 11px;
+    margin-top:37px;
+    margin-bottom:95px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background: url(../img/icon.png) no-repeat center left 11px ;
+    padding-left: 32px;
+    transition: all 0.7s;
+}
+
+.about_me input:hover{
+    color: #e88604;
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+
+.what_can_i_do{
+    text-align: center;
+    background: center/cover no-repeat url(../img/background_picture.jpg);
+    width: 100%;
+    padding-top: 1px;
+    padding-bottom: 100px ;
+
+}
+
+.what_can_i_do_row_container{
+    margin-top: 50px;
+}
+
+.what_can_i_do h2{
+    margin-top: 107px;
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+
+
+.line_two{
+    margin-top: 30px;
+}
+
+.orange{
+    color: #cf7600;
+    margin-top:35px;
+    margin-bottom: 15px;
+    font-family: Bahnschrift, SemiBold;
+}
+
+.cases{
+    margin-top: 100px;
+    margin-bottom: 240px;
+}
+
+
+.cases h2{
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+
+
+.cases h5{
+    margin-bottom: 11px;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+    font-size: 17pt;
+    color: #384354;
+}
+
+
+.cases_img{
+    padding-bottom: 36px;
+}
+
+.cases p{
+   
+    color:#3f495a;
+    font-family: 'Calibri', 'Regular';
+    font-size: 11pt;
+}
+
+.cases aside h5{
+    font-family: 'Franklin Gothic Medium', 'Regular';
+    font-size: 17pt;
+    color: #384354;
+
+}
+
+.cases aside p{
+    
+    font-family: 'Calibri', 'Regular';
+    font-size: 11pt;
+    
+}
+
+.cases div p{
+    line-height: 25px;
+    text-align: left;
+    font-family: Calibri, Regular;
+    font-size: 11pt;
+    
+}
+.cases button{
+    height: 44px;
+    width: 195px;
+    text-align: center;
+    background-color: #00b6af;
+    border: 1px solid #00b6af;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px 27px;
+    padding-bottom: 30px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+    font-size: 10pt;
+    transition: all 0.8s;
+    line-height: 20px;    
+}
+    
+.cases_footer{
+    
+}
+.text_align_left{
+    text-align: left;
+}
+.cases_footer{
+    height: 171px;
+    padding-right:83px;
+}
+
+.proj_name{
+    margin-top: 20px;
+    font-family: Calibri;
+    font-size: 555pt;
+    line-height: 27px;
+    font-weight: Regular;
+    letter-spacing: 0.5px;
+    color: #38475a;
+    text-align: left;
+    margin-bottom: 500px;
+    
+}
+
+.proj_name p{
+    font-size: 20.9px;
+line-height: 1.2;
+font-weight: 400;
+letter-spacing: -0.06em;
+color: #38475a;
+}
+
+.proj_ref{
+    margin-top: 20px;
+    margin-right: 40px;
+   
+}
+
+.cases button:hover{
+    color: #63b5ae;
+    background-color: white;
+    transform: scale(1);
+    transition: 1s;
+}
+
+.line{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cost_calculation{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+   
+}
+
+.cost_calculation div{
+}
+
+.cost_calculation h2{
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    margin-bottom: 10px;
+}
+
+.cost_calculation h4{
+    color: #1c2534;
+    font-size: 14pt;
+    margin-bottom: 23px;
+    margin-top: 49px;
+    text-align: left;
+}
+
+.select_row{
+   
+}
+
+.cost_calculation select{
+    font-size: 8pt;
+    color: #7d7d7d;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
+    padding: 24px 24px 20px 24px;
+    transition: all 0.8s;
+    -webkit-appearance: none;
+    background: url(../img/mark.png) no-repeat right #eeeeee;
+    background-position-x: 97%;
+}
+
+.cost_calculation select span{
+    
+
+}
+.cost_calculation hr{
+    margin-top: 37px;
+    padding-right: 50%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.cost_calculation form{
+    color: #1c2534;
+    margin-top: 27px;
+    transition: all 0.8s;
+}
+.cost_calculation p{
+    font-size: 10pt;
+    margin-bottom: 21px;
+    
+}
+.cost_calculation .summ{
+    font-size: 18pt;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+}
+
+.cost_calculation .costs p{
+    font-size: 10pt;
+}
+
+.costs span{
+    padding-right: 44px;
+}
+.container_summ{
+    
+}
+.cost_calculation div select:hover{
+    
+    background-color:rgba(238, 238, 238, 40%);
+    font-weight: bold;
+    transform: scale(1);
+}
+
+.cost_calculation button{
+    margin-top: 9px;
+    background-color: #00b6af;
+    border: 1px solid #00b6af;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px 43px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+    font-size: 15pt;
+    transition: all 0.8s;
+}
+.cost_calculation button:hover{
+    color: #00b6af;
+    background-color: white;
+    transform: scale(1);
+    transition: 1s;
+}
+
+.statistics{
+    text-align: center;
+    background: fixed no-repeat center/100% url(../img/laptopbackground.jpg);
+    width: 100%;
+    height: auto;
+    margin-top: 155px;
+}
+.statistics h2{
+    padding-top: 103px;
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+.statistics hr{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 36px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;   
+}
+
+.statistics li{
+    font-family: Calibri, Regular;
+    text-align: center;
+    color: #3f495a;
+    margin-left: 76px;
+    margin-right: 76px;
+    width: auto;
+    float: left;
+  
+}
+.statistics img{
+    margin-top:25px;
+}
+.statistics ul{
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom:100px;
+}
+
+.statistics ul .number{   
+    margin-top: 33px;
+    margin-bottom: 15px;
+    font-family: Impact, Regular;
+    font-size: 18pt;
+}
+
+.reviews{
+    text-align: center;
+    
+}
+.reviews h2{
+    font-weight: bold;
+    color: #1a2e43;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    margin-top: 103px;
+    margin-bottom: 33px;
+
+}
+.reviews .img1{
+    margin-bottom: 36px;
+
+}
+.reviews .img2{
+    margin-bottom: 34px;
+}
+.reviews p{
+    margin-bottom: 37px;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 182px;
+}
+.dots div{
+    background: #c96500;
+    border: #c96500;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-left: 14px;
+}
+
+.contacts{
+    color: #ffffff;
+    text-align: center;
+    background: center/cover no-repeat url(../img/laptobackgroundt2.jpg);
+    text-align: center;
+    transition: all 0.8s;
+}
+
+.contacts h2{
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic';
+    font-size: 33.4px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    margin-bottom: 32px;
+    padding-top: 105px;
+}
+
+.contacts .contacts_text{
+    margin-top: 32px;
+    margin-bottom: 49px;
+}
+
+.contacts_list{
+    display:flex;
+    justify-content:center;
+    line-height: 20px;
+}
+.contacts_list p{
+    margin-top: 17px;
+    transition: all 0.8s;
+}
+.contacts_list li{
+    margin-left:51px;
+    margin-right:51px;
+    transition: all 0.8s;
+}
+.contacts h5{
+    margin-bottom: 46px;
+    margin-top: 40px;
+    font-size: 10pt;
+    font-family: 'Franklin Gothic';
+    font-size: 20.9px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    color: #ffffff;
+}
+
+.contacts form{
+    transition: all 0.8s;
+    font-family: 'Franklin Gothic';
+    font-size: 16.7px;
+    line-height: 617px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    color: #5d5d5e;
+    border-radius: 0px;
+}
+
+.contacts_list li p:hover{
+    color: #c96500;
+    transition: all 0.8s;
+}
+.contacts form input:hover{
+    color: #c96500;
+    background-color:rgba(0, 0, 0, 30%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
+
+.contacts form .top:hover{
+    color: #fff;
+    background-color:rgba(255, 255, 255, 60%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1);
+    transition: all 0.8s;
+}
+form textarea:hover{
+    color: #fff;
+    background-color:rgba(255, 255, 255, 70%);
+    font-weight: bold;
+    border-color: rgba(130, 143, 173, 30%);
+    transform: scale(1);
+    transition: all 0.8s;
+}
+
+
+.contacts form textarea{
+    height: 95px;
+    margin-top: 14px;
+    background: white;
+    opacity: 75%;
+    padding-top: 10px;
+    padding-left: 13px;
+    float: left;
+    transition: all 0.8s;
+   
+}
+
+
+
+.contacts .top {
+    margin-top: 10px;
+    height: 34px;
+    
+    background: white;
+    opacity: 75%;
+    
+
+}
+
+
+.top_container{
+  
+}
+
+.contacts .submit{
+    margin-bottom: 3%;
+    margin-top: 28px;
+    background: none;
+    color: white;
+    border: solid 2px white;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Regular';
+    font-size: 10pt;
+    transition: all 0.8s;
+}
+
+.icons img{
+    margin:0px 2.20rem;
+    height: auto;
+    width: auto;
+}
+
+.icons{
+    
+    margin-bottom: 5.1rem;
+}
+
+.copyright{
+    height: 100px;
+    width: auto;
+    background: #354051;   
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+footer small{
+    color: white;
+}
