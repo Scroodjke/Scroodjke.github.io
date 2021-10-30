@@ -261,7 +261,16 @@ nav{
 .what_can_i_do_row_container{
     margin-top: 50px;
 }
+.what_can_i_do_lorem{
+    font-family: 'Calibri', 'Arial';
+    font-size: 16.7px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    color: #38475a;
+    font-family: Arial;
 
+}
 .what_can_i_do h2{
     margin-top: 107px;
     font-weight: bold;
@@ -280,10 +289,12 @@ nav{
 }
 
 .orange{
-    color: #cf7600;
+    color: #e87700;
     margin-top:35px;
-    margin-bottom: 15px;
-    font-family: Bahnschrift, SemiBold;
+    font-family: 'Bahnschrift';
+    font-size: 18.6px;
+
+
 }
 
 .cases{
@@ -529,7 +540,7 @@ color: #38475a;
 
 .statistics{
     text-align: center;
-    background: fixed no-repeat center/100% url(../img/laptopbackground.jpg);
+    background: fixed no-repeat center/cover url(../img/laptopbackground.jpg);
     width: 100%;
     height: auto;
     margin-top: 155px;
@@ -554,20 +565,10 @@ color: #38475a;
     margin-left: auto;   
 }
 
-.statistics li{
-    font-family: Calibri, Regular;
-    text-align: center;
-    color: #3f495a;
-    margin-left: 76px;
-    margin-right: 76px;
-    width: auto;
-    float: left;
-  
-}
 .statistics img{
     margin-top:25px;
 }
-.statistics ul{
+.statistics_ul{
     text-align: center;
     margin-top: 100px;
     display: flex;
@@ -575,7 +576,15 @@ color: #38475a;
     padding-bottom:100px;
 }
 
-.statistics ul .number{   
+.statistics_text{
+    font-family: 'Franklin Gothic';
+    font-size: 16.7px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+  
+    
+}
+.number{   
     margin-top: 33px;
     margin-bottom: 15px;
     font-family: Impact, Regular;
@@ -659,11 +668,7 @@ color: #38475a;
     margin-top: 17px;
     transition: all 0.8s;
 }
-.contacts_list li{
-    margin-left:51px;
-    margin-right:51px;
-    transition: all 0.8s;
-}
+
 .contacts h5{
     margin-bottom: 46px;
     margin-top: 40px;
@@ -730,7 +735,6 @@ form textarea:hover{
 }
 
 
-
 .contacts .top {
     margin-top: 10px;
     height: 34px;
@@ -740,7 +744,6 @@ form textarea:hover{
     
 
 }
-
 
 .top_container{
   
@@ -764,11 +767,12 @@ form textarea:hover{
     margin:0px 2.20rem;
     height: auto;
     width: auto;
+    padding-bottom: 5.1rem;
 }
 
 .icons{
     
-    margin-bottom: 5.1rem;
+  
 }
 
 .copyright{
