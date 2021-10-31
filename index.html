@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Это моя первая страница...">
     <meta name="author" content="Andrey">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Это моя первая страница...">
     <title>Андрей Браун - Веб-разработчик</title>
     <style>
@@ -22,7 +22,7 @@
             /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
             z-index: 1001;
         }
-
+        
         .preloader__row {
             position: relative;
             top: 50%;
@@ -34,7 +34,7 @@
             text-align: center;
             animation: preloader-rotate 2s infinite linear;
         }
-
+        
         .preloader__item {
             position: absolute;
             display: inline-block;
@@ -45,42 +45,40 @@
             height: 35px;
             animation: preloader-bounce 2s infinite ease-in-out;
         }
-
+        
         .preloader__item:last-child {
             top: auto;
             bottom: 0;
             animation-delay: -1s;
         }
-
+        
         @keyframes preloader-rotate {
             100% {
                 transform: rotate(360deg);
             }
         }
-
+        
         @keyframes preloader-bounce {
-
             0%,
             100% {
                 transform: scale(0);
             }
-
             50% {
                 transform: scale(1);
             }
         }
-
+        
         .loaded_hiding .preloader {
             transition: 0.3s opacity;
             opacity: 0;
         }
-
+        
         .loaded .preloader {
             display: none;
         }
     </style>
     <script>
-        window.onload = function () {
+        window.onload = function() {
             document.body.classList.add('loaded');
         }
     </script>
@@ -107,8 +105,7 @@
                             Андрей Браун
                         </div>
                     </div>
-                    <div
-                        class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
+                    <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
                         <div class="menu">
                             <ul>
                                 <li><a href="#">Обо мне</a></li>
@@ -122,8 +119,7 @@
                     </div>
                     <div class="col-5 d-flex d-lg-none flex-column justify-content-center">
                         <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button"
-                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Навигация</button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">Обо мне</a></li>
@@ -145,13 +141,12 @@
                 <div class="row align-items-center h-100">
                     <div class="col-lg-6">
                         <div class="title_container">
-                            <h1><svg height="35" ; width="35" ; aria-setsize="50px" aria-hidden="true" focusable="false"
-                                    data-prefix="fab" data-icon="css3" class="svg-inline--fa fa-css3" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <h1><svg height="35" ; width="35" ; aria-setsize="50px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="css3" class="svg-inline--fa fa-css3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentColor"
                                         d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z">
                                     </path>
-                                </svg>Привет<br>Я Андрей Браун</br></h1>
+                                </svg>Привет<br>Я Андрей Браун</br>
+                            </h1>
                             <h4>Фулл стек веб-разработчик</h4>
                             <input type="button" value="Обо мне">
                             <input type="button" value="Мои работы">
@@ -170,26 +165,22 @@
                     <div class="container">
                         <div class="row">
                             <div class="d-flex justify-content-center">
-                                <p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus
-                                    leo nec ornare diam. Sed commodo nibh ante
-                                    <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at. Duis sed dapibus
-                                    leo nec ornare diam commodo nibh.
+                                <p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                                    <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.
                                 </p>
                             </div>
-                 
+
                             <div class="d-flex justify-content-center">
-                                <p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus
-                                    leo nec ornare diam. Sed commodo nibh ante
-                                    <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at. Duis sed dapibus
-                                    leo nec ornare diam commodo nibh.
+                                <p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                                    <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.
                                 </p>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Скачать резюме">
             </div>
+            <input type="submit" value="Скачать резюме">
+        </div>
         </div>
         <div class="what_can_i_do container-fluid">
             <div class="container">
@@ -198,55 +189,50 @@
                 <div class="container">
                     <div class=".list_whatcanido row text-center justify-content-center">
                         <div class="what_can_i_do_row_container col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-              
-                                    <img src="img/laptop.png" alt="">
-                                    <p class="orange">Веб-дизайн</p>
-                                    <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
-                                        <br>facilisis felis mi in tempus eleifend<br>
-                                        pellentesque natoque etiam.
-                                    </p>
-                               
+
+                            <img src="img/laptop.png" alt="">
+                            <p class="orange">Веб-дизайн</p>
+                            <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
+                                <br>facilisis felis mi in tempus eleifend<br> pellentesque natoque etiam.
+                            </p>
+
                         </div>
                         <div class="what_can_i_do_row_container col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                         
-                                    <img src="img/symbol.png" alt="">
-                                    <p class="orange"> Разрботка</p>
-                                    <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
-                                        <br>facilisis mi in tempus eleifend <br>
-                                        pellentesque.
-                                    </p>
-                               
+
+                            <img src="img/symbol.png" alt="">
+                            <p class="orange"> Разрботка</p>
+                            <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
+                                <br>facilisis mi in tempus eleifend <br> pellentesque.
+                            </p>
+
                         </div>
                         <div class="what_can_i_do_row_container col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-    
-                                    <img src="img/rocket.png" alt="" class="">
-                                    <p class="orange"> CEO-Оптимизация</p>
-                                    <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
-                                        <br> facilisis felis mi in tempus eleifend<br>
-                                        pellentesque natoque etiam.
-                                    </p>
-                                
+
+                            <img src="img/rocket.png" alt="" class="">
+                            <p class="orange"> CEO-Оптимизация</p>
+                            <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
+                                <br> facilisis felis mi in tempus eleifend<br> pellentesque natoque etiam.
+                            </p>
+
                         </div>
                         <div class="what_can_i_do_row_container col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                                    <img src="img/gramophone.png" alt="">
-                                    <p class="orange">Маркетинг</p>
-                                    <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
-                                        <br>facilisis felis mi in tempus eleifend<br>
-                                        pellentesque natoque .
-                                    </p>
+                            <img src="img/gramophone.png" alt="">
+                            <p class="orange">Маркетинг</p>
+                            <p class="what_can_i_do_lorem">Lorem ipsum dolor sit amet placerat
+                                <br>facilisis felis mi in tempus eleifend<br> pellentesque natoque .
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </div>
 
         <div class="cases container">
             <h2 class="text-center">КЕЙСЫ</h2>
             <div><img class="cases_img rounded mx-auto d-block line" src="img/line.png" alt=""></div>
             <div>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec
-                    ornare diamcoccodo nibh ante facilisis.</p>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.</p>
             </div>
 
             <div class="cases_main row">
@@ -272,12 +258,9 @@
 
                             <div class="proj_name col-12 col-md-12 col-xl-8 pb-5">
                                 <h5>Название проекта</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna
-                                    <br class="d-none d-xl-block">aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    <br class="d-none d-xl-block">Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur.
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    <br class="d-none d-xl-block">aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    <br class="d-none d-xl-block">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                 </p>
                             </div>
                         </div>
@@ -289,7 +272,7 @@
 
         <div class="cost_calculation container pt-5 d-md-flex justify-content-md-center">
             <div class="d-inline d-md-flex justify-content-md-center">
-         
+
                 <div class="container">
                     <h2 class="text-center">Расчет стоимости</h2>
                     <div class="select_row container row col-12">
@@ -349,33 +332,33 @@
             <h2>НЕМНОГО СТАТИСТИКИ</h2>
             <img src="img/line.png" alt="">
             <div class="statistics_ul row text-center justify-content-center">
-           
+
                 <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                            <img src="img/smile.png" alt="">
-                            <p class="number">120</p>
-                            <p class="statistics_text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
-                        
+                    <img src="img/smile.png" alt="">
+                    <p class="number">120</p>
+                    <p class="statistics_text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+
                 </div>
                 <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                  
-                            <img src="img/brackets.png" alt="">
-                            <p class="number">4,600</p>
-                            <p class="statistics_text">ЧАСОВ РАБОТЫ</p>
-                        
+
+                    <img src="img/brackets.png" alt="">
+                    <p class="number">4,600</p>
+                    <p class="statistics_text">ЧАСОВ РАБОТЫ</p>
+
                 </div>
                 <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-               
-                            <img src="img/check_mark.png" alt="">
-                            <p class="number">340</p>
-                            <p class="statistics_text">ПРОЕКТОВ ЗАВЕРШЕНО</p>
-                   
+
+                    <img src="img/check_mark.png" alt="">
+                    <p class="number">340</p>
+                    <p class="statistics_text">ПРОЕКТОВ ЗАВЕРШЕНО</p>
+
                 </div>
                 <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                
-                            <img src="img/cup.png" alt="">
-                            <p class="number">23</p>
-                            <p class="statistics_text">НАГРАД ПОЛУЧЕНО</p>
-                        
+
+                    <img src="img/cup.png" alt="">
+                    <p class="number">23</p>
+                    <p class="statistics_text">НАГРАД ПОЛУЧЕНО</p>
+
                 </div>
             </div>
 
@@ -385,20 +368,20 @@
             <div><img src="img/line.png" class="img1" alt=""></div>
             <div> <img src="img/photo2.png" class="img2" alt=""></div>
             <div class="container">
-            <div class="row">
-                <div class="d-flex justify-content-center"><p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed
-                    commodo nibh ante
-                    <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare
-                    diam.
-                </p></div>
-                <p><b>Михаил,</b> Ген директор ПАО "Газпром".</p>
-                <div class="dots">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <p class="col-12 col-md-8 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante
+                            <br class="d-none d-xl-block">facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.
+                        </p>
+                    </div>
+                    <p><b>Михаил,</b> Ген директор ПАО "Газпром".</p>
+                    <div class="dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     <footer>
@@ -406,75 +389,70 @@
             <div class="container">
                 <h2>МОИ КОНТАКТЫ</h2>
                 <img src="img/line.png" alt="">
-                <p class="contacts_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo
-                    nec ornare diamcoccodo </p>
+                <p class="contacts_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
 
                 <div class="contacts_list container">
-                    
+
                     <div class="row text-center justify-content-center row col-10">
                         <div class=" col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                                <img src="img/geo.png" alt="">
-                                <p>Санкт-Петербург<br>Невский проспект 11</p>
+                            <img src="img/geo.png" alt="">
+                            <p>Санкт-Петербург<br>Невский проспект 11</p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
                             <img src="img/envelope.png" alt="">
                             <p>info@companyname.com</p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-8 col-lg-3 col-xl-3">
-                                <img src="img/handset.png" alt="">
-                                 <p>+7 999 999-99-99</p>
-                       
+                            <img src="img/handset.png" alt="">
+                            <p>+7 999 999-99-99</p>
+
                         </div>
                     </div>
                 </div>
 
-                    <h5>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h5>
-                    <div class="">
+                <h5>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h5>
+                <div class="">
 
-                        <div class="d-flex justify-content-center">
-                            <form action="" class="container-sm col-12 col-md-7">
-                                <div class="form-group row d-flex justify-content-center">
-                                    <div class="form-group col col-md-6 col-sm-12">
-                                        <input class="top form-control" id="POST-name" type="form" placeholder="Имя"
-                                            name="Имя">
-                                    </div>
-                                    <div class="form-group col-md-6 col-sm-12">
-                                        <input class="top form-control" id="POST-email" type="form" placeholder="Email"
-                                            name="Email">
-                                    </div>
+                    <div class="d-flex justify-content-center">
+                        <form action="" class="container-sm col-12 col-md-7">
+                            <div class="form-group row d-flex justify-content-center">
+                                <div class="form-group col col-md-6 col-sm-12">
+                                    <input class="top form-control" id="POST-name" type="form" placeholder="Имя" name="Имя">
                                 </div>
-
-
-                                <div class="form-group row d-md-flex justify-content-center">
-                                    <div class="form-group row col">
-                                        <textarea rows="12" class="form-control" name="Сообщение"
-                                            placeholder="Сообщение"></textarea>
-                                    </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <input class="top form-control" id="POST-email" type="form" placeholder="Email" name="Email">
                                 </div>
-
-                            </form>
-                        </div>
-                        <input class="submit" type="submit" name="Отправить">
-                        <div class="icons container d-flex justify-content-center">
-                            <div class="d-flex justify-content-between">
-                                <div class=""><img class="" width="auto" src="img/facebook.png" alt=""></div>
-                                <div class=""><img class="" width="auto" src="img/tweeter.png" alt=""></div>
-                                <div class=""><img class="" width="auto" src="img/ball.png" alt=""></div>
-                                <div class=""><img class="" width="auto" src="img/gh.png" alt=""></div>
-                                <div class=""><img class="" width="auto" src="img/inst.png" alt=""></div>
-                                <div class=""><img class="" width="auto" src="img/in.png" alt=""></div>
                             </div>
-                        </div>
 
+
+                            <div class="form-group row d-md-flex justify-content-center">
+                                <div class="form-group row col">
+                                    <textarea rows="12" class="form-control" name="Сообщение" placeholder="Сообщение"></textarea>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
-                
+                    <input class="submit" type="submit" name="Отправить">
+                    <div class="icons container d-flex justify-content-center">
+                        <div class="d-flex justify-content-between">
+                            <div class=""><img class="" width="auto" src="img/facebook.png" alt=""></div>
+                            <div class=""><img class="" width="auto" src="img/tweeter.png" alt=""></div>
+                            <div class=""><img class="" width="auto" src="img/ball.png" alt=""></div>
+                            <div class=""><img class="" width="auto" src="img/gh.png" alt=""></div>
+                            <div class=""><img class="" width="auto" src="img/inst.png" alt=""></div>
+                            <div class=""><img class="" width="auto" src="img/in.png" alt=""></div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
 
         <div class="container-fluid">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9819.8618529633!2d-71.72097192758115!3d42.96853235048402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e233e8a9946e0d%3A0x590e6c13b1743f65!2z0J3RjNGOINCR0L7RgdGC0L7QvSwg0J3RjNGOLdCl0Y3QvNC_0YjQuNGAIDAzMDcwLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1634047358466!5m2!1sru!2sru"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9819.8618529633!2d-71.72097192758115!3d42.96853235048402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e233e8a9946e0d%3A0x590e6c13b1743f65!2z0J3RjNGOINCR0L7RgdGC0L7QvSwg0J3RjNGOLdCl0Y3QvNC_0YjQuNGAIDAzMDcwLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1634047358466!5m2!1sru!2sru"
                 width="100%" height="351px" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
@@ -487,6 +465,7 @@
     </footer>
 
     </main>
+    <script src="js/myjs.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
