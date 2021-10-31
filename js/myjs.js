@@ -1,5 +1,4 @@
 let calculate = {
-
     costs: [
         [5000, 15000, 20000],
         [0, 10000, 20000],
@@ -10,8 +9,6 @@ let calculate = {
         [0, 0, 7],
         [2, 4],
     ],
-
-
     costsSumm(answers) {
         let costResult;
         switch (answers[0]) {
@@ -28,7 +25,6 @@ let calculate = {
                 costResult += 0;
                 break;
         }
-
         switch (answers[1]) {
             case '1':
                 costResult += this.costs[1][0];
@@ -58,9 +54,7 @@ let calculate = {
         }
 
         return costResult;
-    }
-
-    ,
+    },
 
     deadlinesSumm() {
         let deadlinesResult;
@@ -93,7 +87,6 @@ let calculate = {
                 deadlinesResult += 0;
                 break;
         }
-
 
         switch (answers[2]) {
             case '1':
