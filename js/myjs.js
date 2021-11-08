@@ -1,12 +1,12 @@
 let calculate = {
     costs: [
         [5000, 15000, 20000],
-        [0, 10000, 20000],
+        [5000, 10000, 20000],
         [6000, 7000],
     ],
     deadlines: [
         [7, 14, 21],
-        [0, 0, 7],
+        [5, 5, 7],
         [2, 4],
     ],
     costsSumm(answers) {
@@ -22,7 +22,7 @@ let calculate = {
                 costResult = this.costs[0][2];
                 break;
             default:
-                costResult += 0;
+                costResult = 0;
                 break;
         }
         switch (answers[1]) {
@@ -103,14 +103,97 @@ let calculate = {
     }
 };
 let answers = new Array(3);
-answers[0] = prompt("Тип сайта: 1 - Визитка: 5000р, 2 - Форум: 15000р, 3 - Интернет магазин: 20000р");
-answers[1] = prompt("Дизайн: 1 - Уже готовый дизайн: 0р, 2 - Готовый шаблонный дизайн: 10000р, 3 - Разработка индивидуального дизайна: 20000");
-answers[2] = prompt("Адаптивность: 1 - Адаптивный: 6000р, 2 - Адаптивный с эффектами анимации - 7000");
+$(window).scroll(() => {
+    let ScrollDistance = $(window).scrollTop();
+
+    $(".section").each((i, el) => {
+
+        if($(el).offset().top - $("nav").outerHeight() <= ScrollDistance){
+            $("nav a").each((i, el) =>{
+                if($(el).hasClass("active")){
+                    $(el).removeClass("active");
+                }
+            });
+
+            $('nav li:eq('+ i +')').find('a').addClass('active');
+        }
+    });
+});
 
 
-let val1 = calculate.costsSumm(answers);
-let val2 = calculate.deadlinesSumm(answers);
-console.log(calculate.costsSumm(answers));
-alert("Сумма: " + val1);
-console.log(calculate.deadlinesSumm(answers));
-alert("Срок в сутках: " + val2);
+function number_to(id,from,to,duration) {
+    var element = document.getElementById(id);
+    var start = new Date().getTime();
+    setTimeout(function() {
+    var now = (new Date().getTime()) - start;
+    var progress = now / duration;
+    var result = Math.floor((to - from) * progress + from);
+    element.innerHTML = progress < 1 ? result : to;
+    if (progress < 1) setTimeout(arguments.callee, 10);
+    }, 10);
+}
+
+$('a[href^="#"]').click(function(){
+    let valHref = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 100 + "px"});
+
+});
+
+$(document).ready(function(){
+    $('select').change(function(){
+        answers[0] = $('#type').val();
+        answers[1] = $('#design').val();
+        answers[2] = $('#adapt').val();
+        let sumCostValue =  +$('#summCost').text();
+        let sumDeadlinesValue =  +$('#summDeadlines').text();
+        number_to('summCost',sumCostValue, calculate.costsSumm(answers),1000);
+        number_to('summDeadlines',sumDeadlinesValue, calculate.deadlinesSumm(answers),1000);
+    });
+    number_to('number',0,+$('#number').text(),1000);
+});
+
+
+$(document).ready(function(){
+    let options = {threshold:[0.5]};
+    let observer = new IntersectionObserver(onEntry, options);
+    let elements = $('.element-animation');
+    elements.each((i,el) => {
+        observer.observe(el);   
+    });
+});
+
+function onEntry(entry){
+    entry.forEach(change => {
+        if(change.isIntersecting){
+            change.target.classList.add('show-animation')
+           // change.target.src = change.target.dataset.src;
+        }
+    });
+}
+
+$(document).ready(function(){
+    let options = {threshold:[0.5]};
+    let observer = new IntersectionObserver(onEntryStatistics, options);
+    let elements = $('.numberAnim');
+    elements.each((i,el) => {
+        observer.observe(el);   
+    });
+});
+
+function onEntryStatistics(entry){
+    entry.forEach(change =>{
+        if(change.isIntersecting){
+            for(var i = 1;i < 5;i++){
+                let str = $('#number'+ i).text()
+          
+                number_to('number'+i,0,str,1000);
+            }
+           
+        }
+    })
+}
+$(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+  });
+
+  
